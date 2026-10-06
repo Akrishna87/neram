@@ -5,7 +5,7 @@ your phone, **by day, week and month**. There are no ads, no account and no
 internet access: your usage never leaves the phone.
 
 **Download:** the latest build is always the **Neram.apk** file on the
-[`screen-time-latest` release](https://github.com/Akrishna87/Akrishna87/releases/tag/screen-time-latest).
+[`screen-time-latest` release](https://github.com/Akrishna87/neram/releases/tag/screen-time-latest).
 Open it on your phone and allow installing from your browser when asked.
 Each new build installs as an update over the last one.
 
@@ -76,11 +76,11 @@ To try it on an emulator without tapping through Settings, grant access with
 `adb shell appops set io.github.akrishna87.screentime GET_USAGE_STATS allow`.
 
 CI (`.github/workflows/screen-time-apk.yml`) builds the release APK on every
-push that touches `screen-time-android/`, signs it, runs it on an Android 14
+push to this repo, signs it, runs it on an Android 14
 emulator (`ci/smoke-test.sh`), and publishes it to the `screen-time-latest`
 release with the emulator's screenshots.
 
 **Signing:** release builds are signed with Isaialai's private key
-(`music-player-android/signing/release.keystore.gpg`, unlocked in CI with the
+(`signing/release.keystore.gpg` (a copy of Isaialai's key), unlocked in CI with the
 `SIGNING_PASSPHRASE` secret), like Vaanalai. See
-[`music-player-android/SECURITY.md`](../music-player-android/SECURITY.md).
+[Isaialai's SECURITY.md](https://github.com/Akrishna87/isaialai/blob/main/SECURITY.md).
